@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/hw_calculator/META"
+  "_build/install/default/lib/hw_calculator/dune-package"
+  "_build/install/default/lib/hw_calculator/opam"
+]
+bin: [
+  "_build/install/default/bin/hw_calculator"
+]

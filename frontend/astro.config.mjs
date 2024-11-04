@@ -1,4 +1,3 @@
-// astro.config.mjs
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
@@ -16,6 +15,11 @@ export default defineConfig({
         },
         '/api/python': {
           target: 'http://localhost:3002',
+          changeOrigin: true,
+          rewrite: (path) => '/calculate'
+        },
+        '/api/ocaml': {
+          target: 'http://localhost:3003',
           changeOrigin: true,
           rewrite: (path) => '/calculate'
         }

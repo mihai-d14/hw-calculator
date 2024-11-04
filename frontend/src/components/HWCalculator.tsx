@@ -1,9 +1,4 @@
-// components/HWCalculator.tsx
-import React, { useState, type ChangeEvent } from 'react';
-// import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
-// import { Input } from '@/components/ui/input';
-// import { Button } from '@/components/ui/button';
-// import { Alert, AlertDescription } from '@/components/ui/alert';
+import { useState, type ChangeEvent } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
 import { Input } from './ui/Input';
 import { Button } from './ui/Button';
@@ -29,7 +24,8 @@ const HWCalculator = () => {
 
   const backends = [
     { name: 'Haskell', url: '/api/haskell' },
-    { name: 'Python', url: '/api/python' }
+    { name: 'Python', url: '/api/python' },
+    { name: 'OCaml', url: '/api/ocaml' }
   ];
 
   const calculateAll = async () => {
