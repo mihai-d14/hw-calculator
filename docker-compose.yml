@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - haskell-backend
+      - python-backend
+    environment:
+      - NODE_ENV=development
+
+  haskell-backend:
+    build:
+      context: ./backend/haskell
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+
+  python-backend:
+    build:
+      context: ./backend/python
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
