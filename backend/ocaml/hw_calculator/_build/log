@@ -1,0 +1,17 @@
+# dune exec hw_calculator
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/mihaidinu/.cache/dune/db
+# Workspace root:
+# /Users/mihaidinu/Documents/hw-calculator/backend/ocaml/hw_calculator
+# Auto-detected concurrency: 10
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/mihaidinu/.opam/4.14.1/bin/ocamlc.opt -config > /var/folders/cd/wl9psgw90dbbwrpfjbdylxfw0000gn/T/dune_9bcde1_output

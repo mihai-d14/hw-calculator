@@ -1,0 +1,6 @@
+(executable
+ (public_name hw_calculator)
+ (name main)
+ (libraries cohttp-lwt-unix yojson ppx_deriving_yojson.runtime)
+ (preprocess
+  (pps ppx_deriving_yojson ppx_fields_conv)))
