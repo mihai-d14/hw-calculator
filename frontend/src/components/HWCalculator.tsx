@@ -25,7 +25,9 @@ const HWCalculator = () => {
   const backends = [
     { name: 'Haskell', url: '/api/haskell' },
     { name: 'Python', url: '/api/python' },
-    { name: 'OCaml', url: '/api/ocaml' }
+    { name: 'OCaml', url: '/api/ocaml' },
+    { name: 'PHP', url: '/api/php' },
+    { name: 'Rust', url: '/api/rust' }
   ];
 
   const calculateAll = async () => {
