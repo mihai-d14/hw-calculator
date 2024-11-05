@@ -26,3 +26,21 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3002:3002"
+
+  ocaml-backend:
+    build:
+      context: ./backend/ocaml
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+
+  php-backend:
+    build:
+      context: ./backend/php
+      dockerfile: Dockerfile
+    ports:
+      - "3004:3004"
+    volumes:
+      - ./backend/php:/var/www/html
+    environment:
+      - PHP_INI_DIR=/usr/local/etc/php
