@@ -1,77 +1,100 @@
+# Project Dependencies and Build Artifacts
+
 # Dependencies
-node_modules/
-.pnp
-.pnp.js
+**/node_modules/
+**/.pnp
+**/.pnp.js
 
 # Testing
-coverage/
+**/coverage/
 
 # Production
-build/
-dist/
-.astro/
+**/build/
+**/dist/
 
 # Misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.pem
+**/.DS_Store
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
 
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
 
 # Python
-__pycache__/
-*.py[cod]
-*.class
-venv/
-*.so
-.Python
-develop-eggs/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/.Python
+**/env/
+**/build/
+**/develop-eggs/
+**/dist/
+**/downloads/
+**/eggs/
+**/.eggs/
+**/lib/
+**/lib64/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+**/*.egg-info/
+**/.installed.cfg
+**/*.egg
+**/.venv
+**/venv/
+**/ENV/
+
+# Rust
+**/target/
+**/*.rs.bk
+**/Cargo.lock
 
 # Haskell
-dist
-dist-*
-cabal-dev
-*.o
-*.hi
-*.hie
-*.chi
-*.chs.h
-*.dyn_o
-*.dyn_hi
-.hpc
-.hsenv
-.cabal-sandbox/
-cabal.sandbox.config
-*.prof
-*.aux
-*.hp
-*.eventlog
-.stack-work/
-cabal.project.local
-cabal.project.local~
-.HTF/
-.ghc.environment.*
+**/dist
+**/dist-*
+**/cabal-dev
+**/*.o
+**/*.hi
+**/*.hie
+**/*.chi
+**/*.chs.h
+**/*.dyn_o
+**/*.dyn_hi
+**/.hpc
+**/.hsenv
+**/.cabal-sandbox/
+**/cabal.sandbox.config
+**/*.prof
+**/*.aux
+**/*.hp
+**/*.eventlog
+**/.stack-work/
+**/cabal.project.local
+**/cabal.project.local~
+**/.HTF/
+**/.ghc.environment.*
+
+# OCaml
+**/_build/
+**/*.install
+**/*.native
+**/*.byte
+**/*.cmi
+**/*.cmo
+**/*.cmx
+**/*.cma
+**/*.cmxa
+**/*.cmxs
+**/.merlin
+**/_opam/
 
 # IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
