@@ -30,7 +30,8 @@ const HWCalculator = () => {
     { name: 'Rust', url: '/api/rust' },
     { name: 'C++', url: '/api/cpp' },
     { name: 'Perl', url: '/api/perl' },
-    { name: 'R', url: '/api/r' }
+    { name: 'R', url: '/api/r' },
+    { name: 'Cobol', url: '/api/cobol' }
   ];
 
   const calculateAll = async () => {
