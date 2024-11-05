@@ -118,3 +118,12 @@ backend/cpp/.cache/
 backend/cpp/compile_commands.json
 *.obj
 *.app
+
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+.Rprofile
