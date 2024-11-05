@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/mihaidinu/Documents/hw-calculator/backend/cpp/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DASIO_STANDALONE -I/Users/mihaidinu/Documents/hw-calculator/backend/cpp/src -isystem /Users/mihaidinu/Documents/hw-calculator/backend/cpp/build/vcpkg_installed/arm64-osx/include -O3 -DNDEBUG -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/hw_calculator_cpp.dir/src/main.cpp.o -c /Users/mihaidinu/Documents/hw-calculator/backend/cpp/src/main.cpp",
+  "file": "/Users/mihaidinu/Documents/hw-calculator/backend/cpp/src/main.cpp",
+  "output": "CMakeFiles/hw_calculator_cpp.dir/src/main.cpp.o"
+}
+]

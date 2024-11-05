@@ -1,0 +1,42 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 6d491756ea45a63a3e52635d1b2b41de2d8ea174fb78cefdc710cbf6ecd89650
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: ecfa84ad1fa65fc6f30a97e61b94208a803627b8a7043f5fba5ec42d6eb16301
+Status: install ok installed
+
+Package: asio
+Version: 1.32.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: f19a974bc2b49c9708877a2ac0407c837f9fa289498a8c56e13af59f6b32b959
+Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
+Status: install ok installed
+
+Package: crow
+Version: 1.2.0
+Depends: asio, vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 194fb75bfeae4170d22083bee9b35e304fae5e09c66786eaf376eeb2721a7a8c
+Description: Very fast and easy to use C++ micro web framework
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.11.3
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: a1c9c3e429a28178124903fbeb3b1486fa58c1db818295d89393e993397832e8
+Description: JSON for Modern C++
+Status: install ok installed
+
