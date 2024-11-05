@@ -52,6 +52,11 @@ export default defineConfig({
           target: 'http://localhost:3009',
           changeOrigin: true,
           rewrite: (path) => '/calculate'
+        },
+        '/api/typescript': {
+          target: 'http://localhost:3010',
+          changeOrigin: true,
+          rewrite: (path) => '/calculate'
         }
       }
     }

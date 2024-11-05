@@ -83,3 +83,10 @@ services:
       - "3009:3009"
     volumes:
       - ./backend/r:/app
+
+  typescript-backend:
+    build:
+      context: ./backend/typescript
+      dockerfile: Dockerfile
+    ports:
+      - "3010:3010"
