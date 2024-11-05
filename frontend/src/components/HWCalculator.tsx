@@ -28,7 +28,8 @@ const HWCalculator = () => {
     { name: 'OCaml', url: '/api/ocaml' },
     { name: 'PHP', url: '/api/php' },
     { name: 'Rust', url: '/api/rust' },
-    { name: 'C++', url: '/api/cpp' }
+    { name: 'C++', url: '/api/cpp' },
+    { name: 'Perl', url: '/api/perl' }
   ];
 
   const calculateAll = async () => {

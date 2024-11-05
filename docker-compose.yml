@@ -58,3 +58,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3006:3006"
+
+  perl-backend:
+    build:
+      context: ./backend/perl
+      dockerfile: Dockerfile
+    ports:
+      - "3007:3007"

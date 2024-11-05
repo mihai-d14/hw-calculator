@@ -100,12 +100,21 @@
 **/*.swo
 
 # C++ specific
+**/build/
+**/vcpkg_installed/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
 backend/cpp/build/
 backend/cpp/vcpkg_installed/
 backend/cpp/.cache/
 backend/cpp/compile_commands.json
-*.o
 *.obj
-*.exe
-*.out
 *.app
