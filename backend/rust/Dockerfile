@@ -30,5 +30,5 @@ COPY --from=builder /usr/src/hw-calculator/rust/target/release/hw-calculator-rus
 # Set the startup command
 CMD ["./hw-calculator-rust"]
 
-# Document that the service listens on port 3003
-EXPOSE 3003
+# Document that the service listens on port 3005
+EXPOSE 3005

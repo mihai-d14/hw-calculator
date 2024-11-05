@@ -51,3 +51,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3005:3005"
+
+  cpp-backend:
+    build:
+      context: ./backend/cpp
+      dockerfile: Dockerfile
+    ports:
+      - "3006:3006"

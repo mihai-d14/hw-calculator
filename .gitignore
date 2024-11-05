@@ -98,3 +98,14 @@
 **/.vscode/
 **/*.swp
 **/*.swo
+
+# C++ specific
+backend/cpp/build/
+backend/cpp/vcpkg_installed/
+backend/cpp/.cache/
+backend/cpp/compile_commands.json
+*.o
+*.obj
+*.exe
+*.out
+*.app

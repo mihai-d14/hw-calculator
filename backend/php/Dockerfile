@@ -12,8 +12,8 @@ COPY php.ini /usr/local/etc/php/conf.d/app.ini
 # Copy application code
 COPY . .
 
-# Expose port 3003
-EXPOSE 3003
+# Expose port 3004
+EXPOSE 3004
 
 # Start PHP built-in server
 CMD ["php", "-S", "0.0.0.0:3003"]
