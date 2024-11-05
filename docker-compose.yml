@@ -65,3 +65,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3007:3007"
+
+  r-backend:
+    build:
+      context: ./backend/r
+      dockerfile: Dockerfile
+    ports:
+      - "3008:3008"
+    volumes:
+      - ./backend/r:/app

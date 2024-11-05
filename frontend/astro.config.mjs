@@ -42,6 +42,11 @@ export default defineConfig({
           target: 'http://localhost:3007',
           changeOrigin: true,
           rewrite: (path) => '/calculate'
+        },
+        '/api/r': {
+          target: 'http://localhost:3008',
+          changeOrigin: true,
+          rewrite: (path) => '/calculate'
         }
       }
     }

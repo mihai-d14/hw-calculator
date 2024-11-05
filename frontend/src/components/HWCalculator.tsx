@@ -29,7 +29,8 @@ const HWCalculator = () => {
     { name: 'PHP', url: '/api/php' },
     { name: 'Rust', url: '/api/rust' },
     { name: 'C++', url: '/api/cpp' },
-    { name: 'Perl', url: '/api/perl' }
+    { name: 'Perl', url: '/api/perl' },
+    { name: 'R', url: '/api/r' }
   ];
 
   const calculateAll = async () => {
@@ -46,31 +47,41 @@ const HWCalculator = () => {
     try {
       const promises = backends.map(async backend => {
         const startTime = performance.now();
-        console.log(`Sending request to ${backend.url}`); // Debug log
         
         try {
+          console.log(`${backend.name}: Sending request`);
           const response = await fetch(backend.url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ frequency: p })
           });
-
+    
           if (!response.ok) {
             throw new Error(`${backend.name} returned ${response.status}`);
           }
-
+    
           const endTime = performance.now();
-          const data = await response.json();
+          const rawData = await response.text(); // Get raw response first
+          console.log(`${backend.name} raw response:`, rawData);
           
-          console.log(`${backend.name} response:`, data); // Debug log
+          const data = JSON.parse(rawData); // Parse it manually
+          console.log(`${backend.name} parsed data:`, data);
           
-          return {
-            ...data,
+          // Ensure we have numbers
+          const result = {
+            aa: Number(data.aa),
+            aq: Number(data.aq),
+            qq: Number(data.qq),
             executionTime: endTime - startTime,
-            backend: backend.name
-          } as CalculationResult;
+            backend: backend.name,
+            error: false
+          };
+          
+          console.log(`${backend.name} final result:`, result);
+          return result;
+    
         } catch (error) {
-          console.error(`${backend.name} error:`, error); // Debug log
+          console.error(`${backend.name} error:`, error);
           return {
             aa: 0,
             aq: 0,
@@ -78,17 +89,22 @@ const HWCalculator = () => {
             executionTime: 0,
             backend: backend.name,
             error: true
-          } as CalculationResult;
+          };
         }
       });
-
+    
       const results = await Promise.all(promises);
-      setResults(results.reduce((acc, result) => {
+      console.log('All results:', results);
+      
+      const processedResults = results.reduce((acc, result) => {
         acc[result.backend] = result;
         return acc;
-      }, {} as Results));
+      }, {} as Results);
+      
+      console.log('Processed results:', processedResults);
+      setResults(processedResults);
     } catch (err) {
-      console.error('Error:', err); // Debug log
+      console.error('Error:', err);
       setError('Error calculating results');
     } finally {
       setLoading(false);
