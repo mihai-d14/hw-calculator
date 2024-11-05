@@ -31,7 +31,8 @@ const HWCalculator = () => {
     { name: 'C++', url: '/api/cpp' },
     { name: 'Perl', url: '/api/perl' },
     { name: 'R', url: '/api/r' },
-    { name: 'Cobol', url: '/api/cobol' }
+    { name: 'Cobol', url: '/api/cobol' },
+    { name: 'Typescript', url: '/api/cobol' }
   ];
 
   const calculateAll = async () => {
@@ -62,13 +63,12 @@ const HWCalculator = () => {
           }
     
           const endTime = performance.now();
-          const rawData = await response.text(); // Get raw response first
+          const rawData = await response.text();
           console.log(`${backend.name} raw response:`, rawData);
           
-          const data = JSON.parse(rawData); // Parse it manually
+          const data = JSON.parse(rawData);
           console.log(`${backend.name} parsed data:`, data);
           
-          // Ensure we have numbers
           const result = {
             aa: Number(data.aa),
             aq: Number(data.aq),
@@ -113,7 +113,7 @@ const HWCalculator = () => {
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className="w-full max-w-7xl mx-auto">
       <CardHeader>
         <CardTitle>Hardy-Weinberg Calculator</CardTitle>
       </CardHeader>
@@ -144,21 +144,33 @@ const HWCalculator = () => {
             </Alert>
           )}
 
-          {Object.entries(results).map(([backend, result]) => (
-            <Card key={backend} className="p-4">
-              <h3 className="font-bold">{backend}</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                <div>AA frequency (p²):</div>
-                <div>{result.aa.toFixed(4)}</div>
-                <div>Aa frequency (2pq):</div>
-                <div>{result.aq.toFixed(4)}</div>
-                <div>aa frequency (q²):</div>
-                <div>{result.qq.toFixed(4)}</div>
-                <div>Execution time:</div>
-                <div>{result.executionTime.toFixed(2)}ms</div>
-              </div>
-            </Card>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {Object.entries(results).map(([backend, result]) => (
+              <Card key={backend} className="shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-4">
+                  <h3 className="font-bold text-lg mb-2 pt-2">{backend}</h3>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span>AA (p²):</span>
+                      <span className="font-mono">{result.aa.toFixed(4)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Aa (2pq):</span>
+                      <span className="font-mono">{result.aq.toFixed(4)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>aa (q²):</span>
+                      <span className="font-mono">{result.qq.toFixed(4)}</span>
+                    </div>
+                    <div className="flex justify-between text-gray-500">
+                      <span>Time:</span>
+                      <span className="font-mono">{result.executionTime.toFixed(2)}ms</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </CardContent>
     </Card>
