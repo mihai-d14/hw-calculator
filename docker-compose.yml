@@ -74,3 +74,12 @@ services:
       - "3008:3008"
     volumes:
       - ./backend/r:/app
+
+  cobol-backend:
+    build:
+      context: ./backend/cobol
+      dockerfile: Dockerfile
+    ports:
+      - "3009:3009"
+    volumes:
+      - ./backend/r:/app

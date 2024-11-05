@@ -47,6 +47,11 @@ export default defineConfig({
           target: 'http://localhost:3008',
           changeOrigin: true,
           rewrite: (path) => '/calculate'
+        },
+        '/api/cobol': {
+          target: 'http://localhost:3009',
+          changeOrigin: true,
+          rewrite: (path) => '/calculate'
         }
       }
     }

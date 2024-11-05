@@ -1,0 +1,23 @@
+{
+    "name": "hw-calculator-cobol",
+    "version": "1.0.0",
+    "description": "COBOL Hardy-Weinberg Calculator API",
+    "scripts": {
+      "build:cobol": "cobc -x -o dist/hw src/hw.cbl",
+      "build:ts": "tsc",
+      "build": "mkdir -p dist && npm run build:cobol && npm run build:ts",
+      "start": "node dist/server.js",
+      "dev": "ts-node src/server.ts"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2"
+    },
+    "devDependencies": {
+      "@types/cors": "^2.8.13",
+      "@types/express": "^4.17.17",
+      "@types/node": "^18.15.11",
+      "ts-node": "^10.9.1",
+      "typescript": "^5.0.4"
+    }
+  }

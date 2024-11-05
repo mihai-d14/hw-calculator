@@ -127,3 +127,25 @@ backend/cpp/compile_commands.json
 .Ruserdata
 *.Rproj
 .Rprofile
+
+# COBOL
+*.gdb
+*.so
+*.dll
+*.exe
+hw-calculator
+
+# Node
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
