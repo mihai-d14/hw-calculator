@@ -44,3 +44,10 @@ services:
       - ./backend/php:/var/www/html
     environment:
       - PHP_INI_DIR=/usr/local/etc/php
+
+  rust-backend:
+    build:
+      context: ./backend/rust
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"

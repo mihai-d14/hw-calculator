@@ -27,6 +27,11 @@ export default defineConfig({
           target: 'http://localhost:3004',
           changeOrigin: true,
           rewrite: (path) => '/'
+        },
+        '/api/rust': {
+          target: 'http://localhost:3005',
+          changeOrigin: true,
+          rewrite: (path) => '/calculate'
         }
       }
     }
